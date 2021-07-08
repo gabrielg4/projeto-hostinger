@@ -1,0 +1,129 @@
+.s-hero {
+    margin-top: 11.9rem;
+    padding: 1.9rem;
+    background-color: $brand-purple;
+    .container {
+        display: flex;
+        @include flex(row, flex-start, space-between);
+        .text {
+            width: 100%;
+            max-width: 55.0rem;
+            h1 {    
+                font-family: 'PT Sans', sans-serif;
+                font-weight: bold;
+                font-size: 4.8rem;
+                line-height: 120%;
+                color: $color-white;
+            }
+            p {
+                width: 100%;
+                max-width: 48.8rem;
+                font-size: 1.8rem;
+                line-height: 150%;
+                color: $color-white;
+                margin-top: 1.6rem;
+            }
+
+            button {
+                @include style-btn(5.4rem, $secondary-yellow, #503387);
+                margin-top: 3.2rem;
+            }
+            .conheca {
+                display: flex;
+                align-items: center;
+                margin-top: 8.6rem;
+
+                .icon {
+                    background-color: rgba(124, 90, 186, 0.4);
+                    border-radius: 6px;
+                    padding: 0.9rem;
+                    @include flex(row, center, center)
+                }
+
+                span {
+                    font-weight: bold;
+                    font-size: 1.6rem;
+                    line-height: 1.9rem;
+                    color: $color-white;
+                    margin-left: 1.6rem;
+                    transition: all .4s;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $secondary-yellow;
+                    }
+                }
+            }
+        }
+        .image {
+            position: relative;
+            top: 3.4rem;
+        }
+    }
+    @include responsive(991px) {
+        .container {
+            flex-direction: column;
+            .text {
+                max-width: 100%;
+                margin-bottom: 3rem;
+                h1 {
+                    text-align: center;
+                }
+                p {
+                    max-width: 100%;
+                    text-align: center;
+                }
+                button {
+                    display: block;
+                    margin: 3.2rem auto;
+                }
+                .conheca {
+                    margin-top: 4rem;
+                    justify-content: center;
+                }
+            }
+        }    
+    }
+
+    @include responsive(600px) {
+        padding-top: 2.5rem;
+        margin-top: 8rem;
+        .text {
+            h1 {
+                font-size: 4.3rem;
+            }
+        }
+        .image {
+            left: -1.8rem;
+        }
+    }
+}
+
+.s-resources {
+    display: flex;
+    flex-direction: column;
+    padding-top: 9.2rem;
+    padding-bottom: 5.8rem;
+    .container {
+        .header-section {
+            @include flex(row, center, space-between);
+            margin-bottom: 5.3rem;
+            h2 {
+                width: 100%;
+                max-width: 50.2rem;
+                font-family: 'PT Sans', sans-serif;
+                font-weight: bold;
+                font-size: 3.2rem;
+                line-height: 130%;
+                color: $color-grey-dark;
+            }
+            span {
+                font-weight: 500;
+                font-size: 1.6rem;
+                line-height: 150%;
+                color: $color-grey-dark;
+            }
+        }
+        
+    }
+}

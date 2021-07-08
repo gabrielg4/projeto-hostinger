@@ -11,8 +11,12 @@
 
 html {
     font-size: 62.5%;
+    @include responsive(1280px) {
+        font-size: 55%;
+    }
 }
 
 img {
     max-width: 100%;
+
 }
