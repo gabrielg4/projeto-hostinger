@@ -39,6 +39,9 @@
                     border-radius: 6px;
                     padding: 0.9rem;
                     @include flex(row, center, center);
+                   img {
+                    animation: vertical-animate 1.5s infinite alternate;
+                   }
                 }
 
 
